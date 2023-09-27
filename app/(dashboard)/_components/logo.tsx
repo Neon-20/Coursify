@@ -4,13 +4,13 @@ const Logo = () => {
     return ( 
         <>
         <Image
-        height={80}
-        width={80}
+        height={82}
+        width={82}
         alt="logo"
         src="/logo.svg"
         className="p-4 absolute top-0 left-0 inset-y-0"
         />
-        <p className="ml-14 text-2xl">Coursify</p>
+        <p className="ml-12 text-2xl font-medium">COURSIFY</p>
         </>
     );
 }
