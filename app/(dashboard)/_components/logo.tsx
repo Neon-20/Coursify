@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const Logo = () => {
     return ( 
@@ -10,7 +11,9 @@ const Logo = () => {
         src="/logo.svg"
         className="p-4 absolute top-0 left-0 inset-y-0"
         />
-        <p className="ml-12 text-2xl font-medium">COURSIFY</p>
+        <Link href="/">
+        <p className="ml-12 text-2xl font-sans cursor-pointer">COURSIFY</p>
+        </Link>
         </>
     );
 }

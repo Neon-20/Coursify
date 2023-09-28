@@ -37,10 +37,11 @@ const form = useForm<z.infer<typeof formSchema>>({
 //extract state from form
 const {isSubmitting,isValid} = form.formState;
 const router = useRouter();
+
 const onSubmit = async(values: z.infer<typeof formSchema>) =>{
     try{
     const response = await axios.post("/api/courses",values);
-    router.push(`teacher/courses/${response.data.id}`)
+    router.push(`/teacher/courses/${response.data.id}`)
     }
     catch{
     toast({
