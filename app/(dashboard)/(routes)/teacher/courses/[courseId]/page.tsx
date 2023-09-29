@@ -5,6 +5,7 @@ import { db } from "@/lib/db";
 import { auth } from "@clerk/nextjs";
 import { LayoutDashboard } from "lucide-react";
 import { redirect } from "next/navigation";
+import TitleForm from "./_components/title-form";
 
 const CourseIdPage = async({
     params
@@ -53,10 +54,15 @@ const completionText = `(${completedFields}/${totalLength})`
         <IconBadge variant="default" icon={LayoutDashboard}/>
         <h2 className="text-xl">Customise your Course</h2>
         </div>
+        <div>
+        <TitleForm
+        initialData={course}
+        courseId={course.id}
+        />
+        </div>
         </div>
         </div>
         </div>
     );
 }
-
 export default CourseIdPage;
